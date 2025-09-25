@@ -1,6 +1,6 @@
 """ Utility function for doing analysis on emotion datasets """
 from collections import Counter, OrderedDict
-import plotly.plotly as py
+# import plotly.plotly as py
 import plotly.graph_objs as go
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -65,14 +65,14 @@ def plot_heat_map(plot_x, plot_y, plot_z):
             "gridcolor": "#E1E5ED",
             "tickfont": {"color": "#4D5663"},
             "title": "",
-            "titlefont": {"color": "#4D5663"},
+            # "titlefont": {"color": "#4D5663"},
             "zerolinecolor": "#E1E5ED"
         },
         "yaxis1": {
             "gridcolor": "#E1E5ED",
             "tickfont": {"color": "#4D5663"},
             "title": "",
-            "titlefont": {"color": "#4D5663"},
+            # "titlefont": {"color": "#4D5663"},
             "zeroline": False,
             "zerolinecolor": "#E1E5ED"
         }
@@ -103,7 +103,7 @@ def get_trace(X_pca, data, category, color):
 def plot_word_cloud(text):
     """ Generate word cloud given some input text doc """
     word_cloud = WordCloud().generate(text)
-    plt.figure(figsize=(8,6), dpi=90)
+    plt.figure(figsize=(16,12), dpi=90)
     plt.imshow(word_cloud, interpolation='bilinear')
     plt.axis("off")
     plt.show()
